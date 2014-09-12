@@ -13,7 +13,7 @@ namespace ConsoleApplication1
         {
             string Nombre, Apellido, Mes;
             string Ssalud;
-            int Año, ValorHora, Cantidadhorassemana, Cantidadhorasfindesemana, Bonos;
+            int Año, ValorHora, Cantidadhorassemana, Cantidadhorasfindesemana, Bonos, Anticipos, Descuentos;
 
             Console.Write(" 1 - Ingrese Nombre del Trabajador    :");
             Nombre = Console.ReadLine();
@@ -31,13 +31,17 @@ namespace ConsoleApplication1
             Cantidadhorasfindesemana = Convert.ToInt16(Console.ReadLine());
             Console.Write(" 8 - Bonos Obtenidos en el Mes        :");
             Bonos = Convert.ToInt32(Console.ReadLine());
+            Console.Write(" 9 - Anticipos Solicitado             :");
+            Anticipos = Convert.ToInt32(Console.ReadLine());
+            Console.Write(" 10 - Descuento Prestamo Solicitado   :");
+            Descuentos = Convert.ToInt32(Console.ReadLine());
             int valortotalhabil = Cantidadhorassemana * ValorHora;
             int ValorTotalfin = (Cantidadhorasfindesemana * 50 / 100) * ValorHora;
             int SueldoImponible = valortotalhabil + ValorTotalfin + Bonos;
-            Console.WriteLine("Total sueldo en horas habiles          : " + "$" + valortotalhabil);
-            Console.WriteLine("Sueldo en horas fin de semana          : " + "$" + ValorTotalfin);
-            Console.WriteLine("Sueldo Correspondiente a Bonos         : " + "$" + Bonos);
-            Console.WriteLine("Sueldo Imponible                       : " + "$" + SueldoImponible);
+            Console.WriteLine(" - Total sueldo en horas habiles          : " + "$" + valortotalhabil);
+            Console.WriteLine(" - Sueldo en horas fin de semana          : " + "$" + ValorTotalfin);
+            Console.WriteLine(" - Sueldo Correspondiente a Bonos         : " + "$" + Bonos);
+            Console.WriteLine(" - Sueldo Imponible                       : " + "$" + SueldoImponible);
             Console.WriteLine("Seleccione su sistema de salud: \n 1 Fonasa \n 2 Isapre ");
             Ssalud = Console.ReadLine();
             if (Ssalud == "1")
@@ -53,7 +57,7 @@ namespace ConsoleApplication1
                 string isap = Console.ReadLine();
                 if (isap == "1")
                 {
-
+                    Console.WriteLine("Sueldo liquido es: $" + (SueldoImponible - (SueldoImponible * (11.44 / 100))));
                     Console.ReadLine();
                 }
                 else if (isap == "2")
