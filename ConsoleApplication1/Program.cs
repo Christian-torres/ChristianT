@@ -11,29 +11,31 @@ namespace ConsoleApplication1
 
         static void Main(string[] args)
         {
-            string Nombre, Apellido, Mes;
+            string Nombre, Apellido, Rut, Mes;
             string Ssalud;
             int Año, ValorHora, Cantidadhorassemana, Cantidadhorasfindesemana, Bonos, Anticipos, Descuentos;
 
             Console.Write(" 1 - Ingrese Nombre del Trabajador    :");
             Nombre = Console.ReadLine();
             Console.Write(" 2 - Ingrese Apellido del Trabajador  :");
-            Apellido = Console.ReadLine();  
-            Console.Write(" 3 - Mes de la Liquidacion            :");
+            Apellido = Console.ReadLine();
+            Console.Write(" 3 - Ingrese rut del Trabajador       :");
+            Rut = Console.ReadLine();  
+            Console.Write(" 4 - Mes de la Liquidacion            :");
             Mes = Console.ReadLine();
-            Console.Write(" 4 - Año                              :");
+            Console.Write(" 5 - Año                              :");
             Año = Convert.ToInt16(Console.ReadLine());
-            Console.Write(" 5 - Ingrese Valor Hora               :");
+            Console.Write(" 6 - Ingrese Valor Hora               :");
             ValorHora = Convert.ToInt16(Console.ReadLine());
-            Console.Write(" 6 - Horas Trabajadas en la Semana    :");
+            Console.Write(" 7 - Horas Trabajadas en la Semana    :");
             Cantidadhorassemana = Convert.ToInt16(Console.ReadLine());
-            Console.Write(" 7 - Horas Trabajadas Fin de semana   :");
+            Console.Write(" 8 - Horas Trabajadas Fin de semana   :");
             Cantidadhorasfindesemana = Convert.ToInt16(Console.ReadLine());
-            Console.Write(" 8 - Bonos Obtenidos en el Mes        :");
+            Console.Write(" 9 - Bonos Obtenidos en el Mes        :");
             Bonos = Convert.ToInt32(Console.ReadLine());
-            Console.Write(" 9 - Anticipos Solicitado             :");
+            Console.Write(" 10 - Anticipos Solicitado            :");
             Anticipos = Convert.ToInt32(Console.ReadLine());
-            Console.Write(" 10 - Descuento Prestamo Solicitado   :");
+            Console.Write(" 11 - Descuento Prestamo Solicitado   :");
             Descuentos = Convert.ToInt32(Console.ReadLine());
             int valortotalhabil = Cantidadhorassemana * ValorHora;
             int ValorTotalfin = (Cantidadhorasfindesemana * 50 / 100) * ValorHora;
