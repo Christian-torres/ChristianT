@@ -75,7 +75,7 @@ namespace ConsoleApplication1
                 else if (isap == "3")
                 {
                     SueldoImponible = (SueldoImponible - Anticipos - Descuentos + Bonos) - ((SueldoImponible - Anticipos - Descuentos + Bonos) * 12 / 100);
-                    Console.WriteLine("Sueldo liquido es: $" + (SueldoImponible));
+                    Console.WriteLine("Sueldo liquido del Trabajador es: $" + (SueldoImponible));
                     Console.ReadLine();
 
                 }
