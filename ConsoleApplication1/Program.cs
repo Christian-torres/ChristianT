@@ -37,37 +37,46 @@ namespace ConsoleApplication1
             Anticipos = Convert.ToInt32(Console.ReadLine());
             Console.Write(" 11 - Descuento Prestamo Solicitado   :");
             Descuentos = Convert.ToInt32(Console.ReadLine());
-            int valortotalhabil = Cantidadhorassemana * ValorHora;
-            int ValorTotalfin = (Cantidadhorasfindesemana * 50 / 100) * ValorHora;
-            int SueldoImponible = valortotalhabil + ValorTotalfin + Bonos;
+            double valortotalhabil = Cantidadhorassemana * ValorHora;
+            double ValorTotalfin = (Cantidadhorasfindesemana * 1.5) * ValorHora;
+            double SueldoImponible = valortotalhabil + ValorTotalfin;
             Console.WriteLine(" - Total sueldo en horas habiles          : " + "$" + valortotalhabil);
-            Console.WriteLine(" - Sueldo en horas fin de semana          : " + "$" + ValorTotalfin);
-            Console.WriteLine(" - Sueldo Correspondiente a Bonos         : " + "$" + Bonos);
-            Console.WriteLine(" - Sueldo Imponible                       : " + "$" + SueldoImponible);
+            Console.WriteLine(" - Horas extras fin de semana             : " + "$" + ValorTotalfin);
+            Console.WriteLine(" - Bonos Otrorgados                       : " + "$" + Bonos);
+            Console.WriteLine(" - Sueldo Imponible                       : " + "$" + (SueldoImponible - Descuentos - Anticipos + Bonos) );
             Console.WriteLine("Seleccione su sistema de salud: \n 1 Fonasa \n 2 Isapre ");
             Ssalud = Console.ReadLine();
             if (Ssalud == "1")
             {
                 Ssalud = "Fonasa";
-                int descfon = SueldoImponible - (SueldoImponible * 7 / 100);
+                double descfon = (SueldoImponible - Anticipos - Descuentos + Bonos) - ((SueldoImponible - Anticipos - Descuentos + Bonos) * 7 / 100);
+                SueldoImponible = (SueldoImponible - Anticipos - Descuentos + Bonos) - ((SueldoImponible - Anticipos - Descuentos + Bonos) * 7 / 100);
+
                 Console.WriteLine("Sueldo Imponible menos sistema de salud: " + descfon);
             }
             else if (Ssalud == "2")
             {
                 Ssalud = "Isapre";
-                Console.WriteLine("Seleccione su Isapre: \n 1 Banmedica \n 2 GoldenCross \n 3 Consalud \n 4 CruzBlanca \n 5 MasVida");
+                Console.WriteLine("Seleccione su Isapre: \n 1 Banmedica \n 2 GoldenCross \n 3 MasVida ");
                 string isap = Console.ReadLine();
                 if (isap == "1")
                 {
-                    Console.WriteLine("Sueldo liquido es: $" + (SueldoImponible - (SueldoImponible * (11.44 / 100))));
+                    SueldoImponible = (SueldoImponible - Anticipos - Descuentos + Bonos) - ((SueldoImponible - Anticipos - Descuentos + Bonos) * 10 / 100);
+                    Console.WriteLine("Sueldo liquido es: $" + (SueldoImponible));
                     Console.ReadLine();
                 }
                 else if (isap == "2")
                 {
+                    SueldoImponible = (SueldoImponible - Anticipos - Descuentos + Bonos) - ((SueldoImponible - Anticipos - Descuentos + Bonos) * 11 / 100);
+                    Console.WriteLine("Sueldo liquido es: $" + (SueldoImponible));
+                    Console.ReadLine();
 
                 }
                 else if (isap == "3")
                 {
+                    SueldoImponible = (SueldoImponible - Anticipos - Descuentos + Bonos) - ((SueldoImponible - Anticipos - Descuentos + Bonos) * 12 / 100);
+                    Console.WriteLine("Sueldo liquido es: $" + (SueldoImponible));
+                    Console.ReadLine();
 
                 }
 
@@ -116,3 +125,36 @@ namespace ConsoleApplication1
     }
 
 }
+
+//if (ssalud == "1")
+//                {
+//                    ssalud = "Fonasa";
+//                    int descfon = (sueldoimponible-anticipo-dscto+bono) - ((sueldoimponible-anticipo-dscto+bono) * 7 / 100);
+//                    sueldoimponible = (sueldoimponible-anticipo-dscto+bono) - ((sueldoimponible-anticipo-dscto+bono) * 7 / 100);
+//                    //Console.WriteLine("sueldo menos sistema de salud: " + descfon);
+//                }
+//                else if (ssalud == "2")
+//                {
+//                    ssalud = "Isapre";
+//                    Console.WriteLine("Seleccione su Isapre: 1 Banmedica 2 GoldenCross 3 Consalud");
+//                    string isap = Console.ReadLine();
+//                    if (isap == "1")
+//                    {
+//                        sueldoimponible = (sueldoimponible - anticipo - dscto + bono) - ((sueldoimponible - anticipo - dscto + bono) * 10 / 100);
+//                        //Console.WriteLine(sueldoimponible);
+//                    }
+//                    else if (isap == "2")
+//                    {
+//                        sueldoimponible = (sueldoimponible - anticipo - dscto + bono) - ((sueldoimponible - anticipo - dscto + bono) * 15 / 100);
+//                        //Console.WriteLine(sueldoimponible);
+//                    }
+//                    else if (isap == "3")
+//                    {
+//                        sueldoimponible = (sueldoimponible - anticipo - dscto + bono) - ((sueldoimponible - anticipo - dscto + bono) * 9 / 100);
+//                        //Console.WriteLine(sueldoimponible);
+//                    }
+//                }
+//                else if (ssalud != "1" || ssalud != "2")
+//                {
+//                    ssalud = "no ingreso numero o no es correcto";
+//                }
