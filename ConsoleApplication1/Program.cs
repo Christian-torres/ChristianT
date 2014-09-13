@@ -91,27 +91,27 @@ namespace ConsoleApplication1
             string AFP = Console.ReadLine();
             if (AFP == "1")
             {
-                Console.WriteLine("Sueldo liquido es: $" + (SueldoImponible - (SueldoImponible * (11.44 / 100))));
+                Console.WriteLine("Sueldo liquido del Trabajador es: $" + (SueldoImponible - (SueldoImponible * (11.44 / 100))));
             }
             else if (AFP == "2")
             {
-                Console.WriteLine("Sueldo liquido es: $" + (SueldoImponible - (SueldoImponible * (11.27 / 100))));
+                Console.WriteLine("Sueldo liquido del Trabajador es: $" + (SueldoImponible - (SueldoImponible * (11.27 / 100))));
             }
             else if (AFP == "3")
             {
-                Console.WriteLine("Sueldo liquido es: $" + (SueldoImponible - (SueldoImponible * (11.48 / 100))));
+                Console.WriteLine("Sueldo liquido del Trabajador es: $" + (SueldoImponible - (SueldoImponible * (11.48 / 100))));
             }
             else if (AFP == "4")
             {
-                Console.WriteLine("Sueldo liquido es: $" + (SueldoImponible - (SueldoImponible * (10.47 / 100))));
+                Console.WriteLine("Sueldo liquido del Trabajador es: $" + (SueldoImponible - (SueldoImponible * (10.47 / 100))));
             }
             else if (AFP == "5")
             {
-                Console.WriteLine("Sueldo liquido es: $" + (SueldoImponible - (SueldoImponible * (11.54 / 100))));
+                Console.WriteLine("Sueldo liquido del Trabajador es: $" + (SueldoImponible - (SueldoImponible * (11.54 / 100))));
             }
             else if (AFP == "6")
             {
-                Console.WriteLine("Sueldo liquido es: $" + (SueldoImponible - (SueldoImponible * (10.77 / 100))));
+                Console.WriteLine("Sueldo liquido del Trabajador es: $" + (SueldoImponible - (SueldoImponible * (10.77 / 100))));
             }
 
             
@@ -126,35 +126,3 @@ namespace ConsoleApplication1
 
 }
 
-//if (ssalud == "1")
-//                {
-//                    ssalud = "Fonasa";
-//                    int descfon = (sueldoimponible-anticipo-dscto+bono) - ((sueldoimponible-anticipo-dscto+bono) * 7 / 100);
-//                    sueldoimponible = (sueldoimponible-anticipo-dscto+bono) - ((sueldoimponible-anticipo-dscto+bono) * 7 / 100);
-//                    //Console.WriteLine("sueldo menos sistema de salud: " + descfon);
-//                }
-//                else if (ssalud == "2")
-//                {
-//                    ssalud = "Isapre";
-//                    Console.WriteLine("Seleccione su Isapre: 1 Banmedica 2 GoldenCross 3 Consalud");
-//                    string isap = Console.ReadLine();
-//                    if (isap == "1")
-//                    {
-//                        sueldoimponible = (sueldoimponible - anticipo - dscto + bono) - ((sueldoimponible - anticipo - dscto + bono) * 10 / 100);
-//                        //Console.WriteLine(sueldoimponible);
-//                    }
-//                    else if (isap == "2")
-//                    {
-//                        sueldoimponible = (sueldoimponible - anticipo - dscto + bono) - ((sueldoimponible - anticipo - dscto + bono) * 15 / 100);
-//                        //Console.WriteLine(sueldoimponible);
-//                    }
-//                    else if (isap == "3")
-//                    {
-//                        sueldoimponible = (sueldoimponible - anticipo - dscto + bono) - ((sueldoimponible - anticipo - dscto + bono) * 9 / 100);
-//                        //Console.WriteLine(sueldoimponible);
-//                    }
-//                }
-//                else if (ssalud != "1" || ssalud != "2")
-//                {
-//                    ssalud = "no ingreso numero o no es correcto";
-//                }
